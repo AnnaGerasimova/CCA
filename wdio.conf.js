@@ -17,11 +17,13 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.js'
+        //'./test/specs/**/*.js'
+        './test/specs/elements.js'
+      // './test/specs/defaultFunctionality.js'
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        //'./test/specs/defaultFunctionality.js'
     ],
     //
     // ============
@@ -65,7 +67,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'silent',
     //
     // Set specific log levels per logger
     // loggers:
@@ -124,7 +126,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    //reporters: ['spec','dot',['allure', {outputDir: 'allure-results'}]],
+    reporters: ['spec','dot',['allure', {outputDir: 'allure-results'}]],
 
 
     
